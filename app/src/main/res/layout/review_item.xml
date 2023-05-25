@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clListItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:id="@+id/tv_restaurant_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@string/home_content_image"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.08"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.275"
+            app:srcCompat="@drawable/iv_profile" />
+
+        <TextView
+            android:id="@+id/tv_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="보리쿠쿠"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/tv_restaurant_image"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.15" />
+
+        <TextView
+            android:id="@+id/tv_review_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:text="굿굿"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/tv_restaurant_image"
+            app:layout_constraintTop_toBottomOf="@+id/tv_nickname"
+            app:layout_constraintVertical_bias="0" />
+
+        <ImageView
+            android:id="@+id/tv_place_image"
+            android:layout_width="112dp"
+            android:layout_height="88dp"
+            android:src="@drawable/ic_home_examlple_image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="13dp"
+            android:layout_marginStart="24dp"
+            android:src="@drawable/ic_star3"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_nickname"
+            app:layout_constraintStart_toEndOf="@+id/tv_nickname"
+            app:layout_constraintTop_toTopOf="@+id/tv_nickname"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <TextView
+            android:id="@+id/string"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="리뷰와 같아요"
+            android:textColor="@color/black"
+            android:textSize="9sp"
+            android:layout_marginTop="@dimen/size_10"
+            app:layout_constraintStart_toStartOf="@+id/tv_restaurant_image"
+            app:layout_constraintTop_toBottomOf="@+id/tv_review_content" />
+
+        <TextView
+            android:id="@+id/tv_positive_review_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="1000"
+            android:textColor="@color/purple_main"
+            android:textSize="11sp"
+            android:fontFamily="@font/suit_semibold"
+            app:layout_constraintEnd_toEndOf="@+id/string"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/string"
+            app:layout_constraintTop_toBottomOf="@+id/string" />
+
+        <TextView
+            android:id="@+id/tv_negative_review_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="1000"
+            android:textColor="@color/purple_main"
+            android:textSize="11sp"
+            android:fontFamily="@font/suit_semibold"
+            app:layout_constraintEnd_toEndOf="@+id/string2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/string2"
+            app:layout_constraintTop_toBottomOf="@+id/string2" />
+
+        <TextView
+            android:id="@+id/string2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="리뷰와 달라요"
+            android:textColor="@color/black"
+            android:textSize="9sp"
+            android:layout_marginTop="@dimen/size_10"
+            app:layout_constraintBottom_toBottomOf="@+id/string"
+            app:layout_constraintStart_toEndOf="@+id/string"
+            app:layout_constraintTop_toBottomOf="@+id/tv_review_content"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/tv_sticker1"
+            android:layout_width="47dp"
+            android:layout_height="27dp"
+            android:src="@drawable/ic_sticker1"
+            app:layout_constraintStart_toStartOf="@+id/tv_place_image"
+            app:layout_constraintTop_toTopOf="@+id/tv_place_image" />
+
+        <ImageView
+            android:id="@+id/tv_sticker2"
+            android:layout_width="47dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_sticker1"
+            app:layout_constraintEnd_toEndOf="@+id/tv_place_image"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/tv_sticker1"
+            app:layout_constraintTop_toTopOf="@+id/tv_place_image" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

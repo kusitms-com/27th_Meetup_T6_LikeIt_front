@@ -4,16 +4,17 @@ plugins {
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
     id 'androidx.navigation.safeargs.kotlin'
+    id 'kotlin-android-extensions'
 }
 
 android {
     namespace 'com.kustims.a6six'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.kustims.a6six"
         minSdk 24
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -27,23 +28,28 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '11'
     }
     buildFeatures {
         dataBinding true
         viewBinding true
+        compose true
     }
+    composeOptions {
+        kotlinCompilerExtensionVersion "1.3.1"
+    }
+
 }
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.core:core-ktx:1.6.10'
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'com.google.android.material:material:1.6.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
@@ -62,7 +68,7 @@ dependencies {
     implementation "androidx.activity:activity-ktx:$activity_version"
     implementation "androidx.fragment:fragment-ktx:$fragment_version"
 
-    // Hilt
+    //Hilt
     implementation "com.google.dagger:hilt-android:$hilt_version"
     kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
 
@@ -70,9 +76,75 @@ dependencies {
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
     implementation 'com.squareup.okhttp3:okhttp:4.10.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
 
     // Navigation
     implementation "androidx.navigation:navigation-fragment-ktx:$navigation_version"
     implementation "androidx.navigation:navigation-ui-ktx:$navigation_version"
     implementation "androidx.navigation:navigation-runtime-ktx:$navigation_version"
+
+    //google-Login
+    implementation 'com.google.android.gms:play-services-auth:20.1.0'
+    implementation 'com.squareup.okhttp:okhttp:2.7.5'
+
+    //koin
+    implementation "io.insert-koin:koin-android:$koin_version"
+    implementation "io.insert-koin:koin-core:$koin_version"
+    testImplementation "io.insert-koin:koin-test:$koin_version"
+    implementation "io.insert-koin:koin-androidx-compose:3.1.6"
+
+    implementation "androidx.activity:activity-compose:1.3.0-alpha03"
+
+    //Compose
+    // Integration with activities
+    implementation 'androidx.activity:activity-compose:1.4.0'
+    // Compose Material Design
+    implementation 'androidx.compose.material:material:1.1.1'
+    // Animations
+    implementation 'androidx.compose.animation:animation:1.1.1'
+    // Tooling support (Previews, etc.)
+    implementation 'androidx.compose.ui:ui-tooling:1.1.1'
+    // Integration with ViewModels
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-compose:2.4.1'
+    // UI Tests
+    androidTestImplementation 'androidx.compose.ui:ui-test-junit4:1.1.1'
+    implementation "androidx.compose.runtime:runtime-livedata:1.1.1"
+
+    //compose Compiler
+    implementation "androidx.compose.compiler:compiler:1.0.0-beta08"
+
+    //timber
+    implementation "com.jakewharton.timber:timber:4.7.1"
+
+    //data store
+    implementation "androidx.datastore:datastore-preferences:1.0.0"
+    implementation "androidx.datastore:datastore-core:1.0.0"
+
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.3"
+    implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0")
+
+    //timber
+    implementation "com.jakewharton.timber:timber:4.7.1"
+
+    //data store
+    implementation "androidx.datastore:datastore-preferences:1.0.0"
+    implementation "androidx.datastore:datastore-core:1.0.0"
+
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.3"
+    implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0")
+
+    //data store
+    implementation "androidx.datastore:datastore-preferences:1.0.0"
+    implementation "androidx.datastore:datastore-core:1.0.0"
+
+    // ViewPager2
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
+    implementation 'com.github.denzcoskun:ImageSlideshow:0.1.0'
+
+    // cardview
+    implementation("androidx.cardview:cardview:1.0.0")
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+
+
 }

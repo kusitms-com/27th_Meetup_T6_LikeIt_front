@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="19dp"
+        android:paddingTop="@dimen/size_23"
+        android:paddingEnd="19dp">
+
+        <TextView
+            android:id="@+id/tv_setting_mypage"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:text="내 정보"
+            android:textSize="@dimen/font_size_16"
+            android:fontFamily="@font/suit_bold"
+            android:textColor="@color/likeit_main_purple"
+            app:layout_constraintStart_toStartOf="parent"
+            android:includeFontPadding="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="center"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_editProfile_mypage_setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_12"
+            android:fontFamily="@font/suit_medium"
+            android:text="회원 정보 수정"
+            android:textColor="#000000"
+            android:textSize="@dimen/font_size_15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_setting_mypage" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_vector_mypage_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_mypage_setting_vector"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_notice_mypage_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_12"
+            android:layout_marginTop="@dimen/size_32"
+            android:fontFamily="@font/suit_medium"
+            android:text="공지사항 및 이용약관"
+            android:textColor="#000000"
+            android:textSize="@dimen/font_size_15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_editProfile_mypage_setting" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_vector2_mypage_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_mypage_setting_vector"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_notice_mypage_setting" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_version_info_mypage_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_12"
+            android:layout_marginTop="@dimen/size_36"
+            android:fontFamily="@font/suit_medium"
+            android:text="버전정보"
+            android:textColor="#000000"
+            android:textSize="@dimen/font_size_15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_notice_mypage_setting" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/suit_medium"
+            android:text="1.0.0"
+            android:textColor="#000000"
+            android:textSize="@dimen/font_size_15"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_version_info_mypage_setting" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_logout_mypage_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_12"
+            android:layout_marginTop="@dimen/size_36"
+            android:fontFamily="@font/suit_medium"
+            android:text="로그아웃"
+            android:textColor="#000000"
+            android:textSize="@dimen/font_size_15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_version_info_mypage_setting" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
